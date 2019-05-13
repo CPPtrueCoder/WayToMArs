@@ -19,7 +19,7 @@ void Earth::ShowRadVec()
 
 void Earth::GetCoordinate()
 {
-  //std::cout<<currentCoordinates_.x<<std::endl;
+  std::cout<<currentCoordinates_.x<<std::endl;
   std::cout<<currentCoordinates_.y<<std::endl;
 }
 

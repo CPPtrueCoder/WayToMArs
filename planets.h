@@ -42,7 +42,7 @@ public :
   Parametrs_dep_coordinates currentCoordinates_;
   Parametrs_dep_coordinates gravityForces_;
   void Move () override ;
-  ~Earth () override;
+  ~Earth () override=default;
 private:
 double gravityEarth_ ;
 double RadVectorUntSun;
