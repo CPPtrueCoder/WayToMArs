@@ -23,6 +23,9 @@ void Earth::GetCoordinate()
   std::cout<<currentCoordinates_.y<<std::endl;
 }
 
+void Earth::GravityShow(){
+  std::cout<<" Gravity :" <<gravityForces_.x<<" "<<gravityForces_.y<<std::endl;}
+
 
 Parametrs_dep_coordinates Earth::Forces()
 {
@@ -40,4 +43,5 @@ void Earth::Move()
   GravityShow();
   }
 }
+
 

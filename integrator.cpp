@@ -12,7 +12,6 @@ void Integrator(std::vector<Earth> &Earth)
       j.currentCoordinates_.x+=j.gravityForces_.x*deltaT;
       j.currentCoordinates_.y+=j.gravityForces_.y*deltaT;
       j.GravityShow();
-
     }
   }
 

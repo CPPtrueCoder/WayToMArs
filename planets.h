@@ -19,17 +19,30 @@ const  double Tend = 365*86400;
 const double Tbeginning= 1;
 const double deltaT=86400;
 
-class Earth {
-public : Earth ();
-  double Radius_vector_calculating();
-  void ShowRadVec();
-  void GetCoordinate();
-  void GravityShow() {
-  std::cout<<" Gravity :" <<gravityForces_.x<<" "<<gravityForces_.y<<std::endl;}
-  Parametrs_dep_coordinates Forces () ;
+class TObject{
+
+public :  TObject() = default ;
+  virtual double Radius_vector_calculating() =0;
+  virtual void ShowRadVec()=0;
+  virtual void GetCoordinate()=0;
+  virtual void GravityShow() = 0;
+  virtual void Move() = 0 ;
+  virtual   Parametrs_dep_coordinates Forces ()=0;
+  virtual ~TObject()=default;
+};
+
+class Earth:public TObject {
+public :
+  Earth ();
+  double Radius_vector_calculating() override;
+  void ShowRadVec() override;
+  void GetCoordinate() override;
+  void GravityShow() override;
+  Parametrs_dep_coordinates Forces () override;
   Parametrs_dep_coordinates currentCoordinates_;
   Parametrs_dep_coordinates gravityForces_;
-  void Move ();
+  void Move () override ;
+  ~Earth () override;
 private:
 double gravityEarth_ ;
 double RadVectorUntSun;
