@@ -1,13 +1,13 @@
 #include <iostream>
 #include "integrator.h"
 #include "planets.h"
+#include "prototypefactory.h"
 using namespace std;
-
-
-
 
 int main()
 {
-  Earth planet1;
-  planet1.Move();
+  PrototypeFactory planets_creator;
+  vector <std::unique_ptr <TObject>> a;
+  a.push_back(planets_creator.createEath());
+  Integrator(a);
 }

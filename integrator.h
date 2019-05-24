@@ -4,7 +4,6 @@
 #include <cmath>
 #include <algorithm>
 #include <numeric>
-
-void Integrator ( std::vector <Earth> & Earth);
+void Integrator (std::vector <std::unique_ptr <TObject>>  & ji);
 
 #endif // INTEGRATOR_H
